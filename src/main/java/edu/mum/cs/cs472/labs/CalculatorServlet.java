@@ -19,7 +19,7 @@ public class CalculatorServlet extends HttpServlet {
         String mult1 = req.getParameter("mult1");
         String mult2 = req.getParameter("mult2");
         if(!add1.equals("") && !add2.equals("")){
-            int sum = Integer.valueOf(add1) + Integer.valueOf(add2);
+            int sum = Integer.parseInt(add1) + Integer.parseInt(add2);
             out.println("<input type=\"text\" name=\"add1\" value=\"" + add1 + "\"> + <input type=\"text\" name=\"add2\" value=\"" + add2 +"\"> = <input type=\"text\" name=\"sum\" value=\"" + sum +"\">");
         }
         else{
@@ -27,7 +27,7 @@ public class CalculatorServlet extends HttpServlet {
         }
         out.println("<br></br>");
         if(!mult1.equals("") && !mult2.equals("")){
-            int product = Integer.valueOf(mult1) * Integer.valueOf(mult2);
+            int product = Integer.parseInt(mult1) * Integer.parseInt(mult2);
             out.println("<input type=\"text\" name=\"mult1\" value=\"" + mult1 + "\"> * <input type=\"text\" name=\"mult2\" value=\"" + mult2 +"\"> = <input type=\"text\" name=\"product\" value=\" " + product +"\">");
         }
         else{
